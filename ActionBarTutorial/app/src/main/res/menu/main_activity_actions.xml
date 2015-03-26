@@ -1,0 +1,23 @@
+< menu xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:ActionBarTutorial="http://schemas.android.com/apk/res-auto" >
+    <!-- since Android version as low as 2.1 the android: name space does not support
+         the showAsAction attribute. Just create your own XML namespace -->
+
+    <!--Search should always appear as action button -->
+    <item android:id="@+id/action_search"
+          android:icon="@drawable/ic_action_search"
+          android:title="@string/action_search"
+          ActionBarTutorial:showAsAction="ifRoom" /> <!-- Declare showAsAction from the namespace
+                                                          you created -->
+    <!-- Setttings should always be in the overflow button -->
+    <item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          ActionBarTutorial:showAsAction="never" />
+
+
+    <!--This declares that the Search action should appear
+ as an action button when room is available in the action bar,
+ but the Settings action should always appear in the overflow.
+ (By default, all actions appear in the overflow, but it's good
+ practice to explicitly declare your design intentions for each action.) -->
+</menu>
